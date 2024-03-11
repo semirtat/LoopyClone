@@ -242,7 +242,7 @@ function Node(model, config){
 		// Text!
 		//var fontsize = 10;
 		//ctx.font = "normal "+fontsize+"px sans-serif";
-		ctx.font = "100px Arial";
+		ctx.font = "40px Arial";
 		ctx.textAlign = "center";
 		ctx.textBaseline = "middle";
 		ctx.fillStyle = "#000";
