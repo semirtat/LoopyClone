@@ -172,7 +172,7 @@ function Sidebar(loopy){
 			"<span class='mini_button' onclick='publish(\"modal\",[\"credits\"])'>credits</span><br><br>"+
 
 			"<hr/><br>"+
-
+*/
 			"<span class='mini_button' onclick='publish(\"modal\",[\"save_link\"])'>save as link</span> <br><br>"+
 			"<span class='mini_button' onclick='publish(\"export/file\")'>save as file</span> "+
 			"<span class='mini_button' onclick='publish(\"import/file\")'>load from file</span> <br><br>"+
@@ -185,7 +185,6 @@ function Sidebar(loopy){
 			"made by <a target='_blank' href='http://ncase.me'>nicky case</a> "+
 			"with your support <a target='_blank' href='https://www.patreon.com/ncase'>on patreon</a> &lt;3<br><br>"+
 			"<span style='font-size:0.85em'>P.S: go read <a target='_blank' href='https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557'>Thinking In Systems</a>, thx</span>"
-*/
 		}));
 		self.addPage("Edit", page);
 	})();
