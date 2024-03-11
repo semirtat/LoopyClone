@@ -243,7 +243,7 @@ function Node(model, config){
 		//var fontsize = 10;
 		//ctx.font = "normal "+fontsize+"px sans-serif";
 		ctx.font = "40px Arial";
-		ctx.textAlign = "center";
+		ctx.textAlign = "middle";
 		ctx.textBaseline = "top";
 		ctx.fillStyle = "#000";
 		/*
@@ -254,7 +254,7 @@ function Node(model, config){
 			width = ctx.measureText(self.label).width;
 		}
 		*/
-		ctx.fillText(self.label, 0, 0);
+		ctx.fillText(self.label, 0, 50);
 
 		// WOBBLE CONTROLS
 		var cl = 40;
