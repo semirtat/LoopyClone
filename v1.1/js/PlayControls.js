@@ -5,7 +5,7 @@ PLAY CONTROLS CODE:
 - pause/reset/speed
 
 **********************************/
-/*
+
 function PlayControls(loopy){
 
 	var self = this;
@@ -183,4 +183,3 @@ function PlaySlider(config){
 	};
 
 }
-*/
