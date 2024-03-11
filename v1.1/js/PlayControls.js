@@ -14,11 +14,35 @@ function PlayControls(loopy){
 	self.loopy = loopy;
 
 	// PAGES & BUTTONS
+
 	// PLAY BUTTON's keyboard shortcut
 	// TODO: Toggle back & forth??????
-
+	subscribe("key/enter",function(){
+		if(Key.control){ // Ctrl-Enter or ⌘-Enter
+			loopy.setMode(Loopy.MODE_PLAY);
+		}
+	});
 
 	// During the Editor
+	(function(){
+		var page = new Page();
+
+		// PLAY BUTTON
+		var buttonDOM = page.addComponent(new PlayButton({
+			icon: 0,
+			label: "Play",
+			tooltip: isMacLike ? "⌘-Enter" : "control-enter",
+			onclick: function(){
+				loopy.setMode(Loopy.MODE_PLAY);
+				//self.showPage("Edit");
+			}
+		})).dom;
+		buttonDOM.setAttribute("big","yes");
+		buttonDOM.style.fontSize = "28px";
+		buttonDOM.style.height = "35px";
+
+		self.addPage("Editor", page);
+	})();
 
 	// During the Player
 	(function(){
@@ -99,7 +123,24 @@ function PlayControls(loopy){
 	
 }
 
+function PlayButton(config){
 
+	var self = this;
+
+	var label = "<div class='play_button_icon' icon='"+config.icon+"'></div> "
+				+ "<div class='play_button_label'>"+config.label+"</div>";
+
+	self.dom = _createButton(label, function(){
+		config.onclick();
+	});
+
+	// Tooltip!
+	if(config.tooltip){
+		self.dom.setAttribute("data-balloon", config.tooltip);
+		self.dom.setAttribute("data-balloon-pos", "top");
+	}
+
+}
 function PlaySlider(config){
 
 	var self = this;
