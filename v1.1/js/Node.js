@@ -254,7 +254,7 @@ function Node(model, config){
 			width = ctx.measureText(self.label).width;
 		}
 		*/
-		ctx.fillText(self.label, 0, 50);
+		ctx.fillText(self.label, 0, 200);
 
 		// WOBBLE CONTROLS
 		var cl = 40;
