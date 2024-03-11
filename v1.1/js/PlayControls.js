@@ -5,7 +5,7 @@ PLAY CONTROLS CODE:
 - pause/reset/speed
 
 **********************************/
-
+/*
 function PlayControls(loopy){
 
 	var self = this;
@@ -14,7 +14,6 @@ function PlayControls(loopy){
 	self.loopy = loopy;
 
 	// PAGES & BUTTONS
-
 	// PLAY BUTTON's keyboard shortcut
 	// TODO: Toggle back & forth??????
 	subscribe("key/enter",function(){
@@ -184,3 +183,4 @@ function PlaySlider(config){
 	};
 
 }
+*/
