@@ -166,7 +166,7 @@ function Sidebar(loopy){
 			html: ""+
 			
 			"<b style='font-size:1.4em'>LOOPY</b> (v1.1)<br>a tool for thinking in systems<br><br>"+
-
+/*
 			"<span class='mini_button' onclick='publish(\"modal\",[\"examples\"])'>see examples</span> "+
 			"<span class='mini_button' onclick='publish(\"modal\",[\"howto\"])'>how to</span> "+
 			"<span class='mini_button' onclick='publish(\"modal\",[\"credits\"])'>credits</span><br><br>"+
@@ -185,7 +185,7 @@ function Sidebar(loopy){
 			"made by <a target='_blank' href='http://ncase.me'>nicky case</a> "+
 			"with your support <a target='_blank' href='https://www.patreon.com/ncase'>on patreon</a> &lt;3<br><br>"+
 			"<span style='font-size:0.85em'>P.S: go read <a target='_blank' href='https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557'>Thinking In Systems</a>, thx</span>"
-
+*/
 		}));
 		self.addPage("Edit", page);
 	})();
