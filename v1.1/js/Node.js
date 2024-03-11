@@ -243,8 +243,8 @@ function Node(model, config){
 		//var fontsize = 10;
 		//ctx.font = "normal "+fontsize+"px sans-serif";
 		ctx.font = "40px Arial";
-		ctx.textAlign = "middle";
-		ctx.textBaseline = "top";
+		ctx.textAlign = "center";
+		ctx.textBaseline = "middle";
 		ctx.fillStyle = "#000";
 		/*
 		var width = ctx.measureText(self.label).width;
