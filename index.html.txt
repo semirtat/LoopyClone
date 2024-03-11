@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> Hellow world </h1>
+<p> Hostiiing </p>
+</body>
+</html>
