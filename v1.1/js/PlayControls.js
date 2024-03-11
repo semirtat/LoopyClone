@@ -19,12 +19,6 @@ function PlayControls(loopy){
 
 
 	// During the Editor
-	(function(){
-		var page = new Page();
-
-
-		self.addPage("Editor", page);
-	})();
 
 	// During the Player
 	(function(){
@@ -105,24 +99,7 @@ function PlayControls(loopy){
 	
 }
 
-function PlayButton(config){
 
-	var self = this;
-
-	var label = "<div class='play_button_icon' icon='"+config.icon+"'></div> "
-				+ "<div class='play_button_label'>"+config.label+"</div>";
-
-	self.dom = _createButton(label, function(){
-		config.onclick();
-	});
-
-	// Tooltip!
-	if(config.tooltip){
-		self.dom.setAttribute("data-balloon", config.tooltip);
-		self.dom.setAttribute("data-balloon-pos", "top");
-	}
-
-}
 function PlaySlider(config){
 
 	var self = this;
