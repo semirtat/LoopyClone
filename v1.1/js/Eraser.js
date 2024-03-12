@@ -16,11 +16,12 @@ function Eraser(loopy){
 		if(self.loopy.tool!=Loopy.TOOL_ERASE) return;
 
 		// Erase any nodes under here
+		/*
 		if(Mouse.pressed || clicked){
 			var eraseNode = loopy.model.getNodeByPoint(Mouse.x, Mouse.y);
 			if(eraseNode) eraseNode.kill();
 		}
-
+		*/
 		// Erase any edges under here
 		if(Mouse.pressed || clicked){
 			var eraseEdge = loopy.model.getEdgeByPoint(Mouse.x, Mouse.y, true);
