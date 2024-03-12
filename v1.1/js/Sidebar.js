@@ -39,6 +39,7 @@ function Sidebar(loopy){
             textarea: true,
             rows: 3
         }));
+        /*
         page.addComponent("hue", new ComponentSlider({
             bg: "color",
             label: "Color:",
@@ -47,6 +48,7 @@ function Sidebar(loopy){
                 Node.defaultHue = value;
             }
         }));
+        */
         page.addComponent("init", new ComponentSlider({
             bg: "initial",
             label: "Start Amount:",
