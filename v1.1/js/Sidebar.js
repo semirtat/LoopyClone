@@ -25,6 +25,7 @@ function Sidebar(loopy){
     ////////////////////////////////////////////////////////////////////////////////////////////
 
     // Node!
+    /*
     (function(){
         var page = new SidebarPage();
         page.addComponent(new ComponentButton({
@@ -39,7 +40,6 @@ function Sidebar(loopy){
             textarea: true,
             rows: 3
         }));
-        /*
         page.addComponent("hue", new ComponentSlider({
             bg: "color",
             label: "Color:",
@@ -48,7 +48,6 @@ function Sidebar(loopy){
                 Node.defaultHue = value;
             }
         }));
-        */
         page.addComponent("init", new ComponentSlider({
             bg: "initial",
             label: "Start Amount:",
@@ -80,7 +79,7 @@ function Sidebar(loopy){
         }));
         self.addPage("Node", page);
     })();
-
+    */
     // Edge!
     (function(){
         var page = new SidebarPage();
