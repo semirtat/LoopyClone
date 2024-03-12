@@ -17,7 +17,7 @@ function PlayControls(loopy){
 
 	// PLAY BUTTON's keyboard shortcut
 	// TODO: Toggle back & forth??????
-	/*
+	
 	subscribe("key/enter",function(){
 		if(Key.control){ // Ctrl-Enter or ⌘-Enter
 			loopy.setMode(Loopy.MODE_PLAY);
@@ -44,7 +44,7 @@ function PlayControls(loopy){
 
 		self.addPage("Editor", page);
 	})();
-	*/
+	
 	// During the Player
 	(function(){
 		var page = new Page();
@@ -123,7 +123,7 @@ function PlayControls(loopy){
 	})();
 	
 }
-/*
+
 function PlayButton(config){
 
 	var self = this;
@@ -142,7 +142,7 @@ function PlayButton(config){
 	}
 
 }
-*/
+
 function PlaySlider(config){
 
 	var self = this;
