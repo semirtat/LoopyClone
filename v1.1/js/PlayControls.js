@@ -35,7 +35,7 @@ function PlayControls(loopy){
 			tooltip: isMacLike ? "⌘-Enter" : "control-enter",
 			onclick: function(){
 				loopy.setMode(Loopy.MODE_PLAY);
-				//self.showPage("Edit");
+				self.showPage("Edit");
 			}
 		})).dom;
 		buttonDOM.setAttribute("big","yes");

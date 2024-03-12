@@ -225,20 +225,13 @@ function Node(model, config) {
 		ctx.fill();
 
 		// Text!
-		ctx.font = "40px Arial";
+		ctx.font = "25px Arial"; // Adjust the font size as needed
 		ctx.textAlign = "center";
-		ctx.textBaseline = "middle";
+		ctx.textBaseline = "top"; // Start drawing text from its top edge
 		ctx.fillStyle = "#000";
-
-		// Split label into lines
-		var lines = self.label.split('\n');
-		var lineHeight = 45; // Adjust based on font size
-		var totalHeight = lines.length * lineHeight;
-
-		// Adjust start position so text is centered vertically
-		lines.forEach((line, index) => {
-			var lineY = -(totalHeight / 2) + (index * lineHeight) + lineHeight / 2;
-			ctx.fillText(line, 0, lineY);
+		var labelY = this.radius * 2 + 20; // Position the label below the node, adjust the offset as needed
+		this.label.split('\n').forEach(function(line, i) {
+			ctx.fillText(line, 0, labelY + i * 24); // Adjust line height as needed
 		});
 
 		// WOBBLE CONTROLS
