@@ -5,67 +5,93 @@ LABEL!
 **********************************/
 
 Label.FONTSIZE = 40;
+Label.MAX_TEXT_WIDTH = 10; // Set the max width to 300 pixels
 
 function Label(model, config){
 
-	var self = this;
-	self._CLASS_ = "Label";
+    var self = this;
+    self._CLASS_ = "Label";
 
-	// Mah Parents!
-	self.loopy = model.loopy;
-	self.model = model;
-	self.config = config;
+    // Mah Parents!
+    self.loopy = model.loopy;
+    self.model = model;
+    self.config = config;
 
-	// Default values...
-	_configureProperties(self, config, {
-		x: 0,
-		y: 0,
-		text: "..."
-	});
+    // Default values...
+    _configureProperties(self, config, {
+        x: 0,
+        y: 0,
+        text: "...",
+        maxTextWidth: Label.MAX_TEXT_WIDTH // Add a maxTextWidth property
+    });
 
-	// Draw
-	var _circleRadius = 0;
-	self.draw = function(ctx){
+    // Draw
+    var _circleRadius = 0;
+    self.draw = function(ctx){
 
-		// Retina
-		var x = self.x*2;
-		var y = self.y*2;
+        // Retina
+        var x = self.x*2;
+        var y = self.y*2;
 
-		// DRAW HIGHLIGHT???
-		if(self.loopy.sidebar.currentPage.target == self){
-			var bounds = self.getBounds();
-			ctx.save();
-			ctx.scale(2,2); // RETINA
-			ctx.beginPath();
-			ctx.rect(bounds.x, bounds.y, bounds.width, bounds.height);
-			ctx.fillStyle = HIGHLIGHT_COLOR;
-			ctx.fill();
-			ctx.restore();
-		}
+        // DRAW HIGHLIGHT???
+        if(self.loopy.sidebar.currentPage.target == self){
+            var bounds = self.getBounds();
+            ctx.save();
+            ctx.scale(2,2); // RETINA
+            ctx.beginPath();
+            ctx.rect(bounds.x, bounds.y, bounds.width, bounds.height);
+            ctx.fillStyle = HIGHLIGHT_COLOR;
+            ctx.fill();
+            ctx.restore();
+        }
 
-		// Translate!
-		ctx.save();
-		ctx.translate(x,y);
+        // Translate!
+        ctx.save();
+        ctx.translate(x,y);
 
-		// Text!
-		ctx.font = "100 "+Label.FONTSIZE+"px sans-serif";
-		ctx.textAlign = "center";
-		ctx.textBaseline = "middle";
-		ctx.fillStyle = "#000";
+        // Text!
+        ctx.font = "100 "+Label.FONTSIZE+"px sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "#000";
 
-		// ugh new lines are a PAIN.
-		var lines = self.breakText();
-		ctx.translate(0, -(Label.FONTSIZE*lines.length)/2);
-		for(var i=0; i<lines.length; i++){
-			var line = lines[i];
-			ctx.fillText(line, 0, 0);
-			ctx.translate(0, Label.FONTSIZE);
-		}
+        // Break lines if necessary
+        var lines = self.breakText(ctx); // Pass the context to breakText
+        ctx.translate(0, -(Label.FONTSIZE*lines.length)/2);
+        for(var i=0; i<lines.length; i++){
+            var line = lines[i];
+            ctx.fillText(line, 0, 0);
+            ctx.translate(0, Label.FONTSIZE);
+        }
 
-		// Restore
-		ctx.restore();
+        // Restore
+        ctx.restore();
 
-	};
+    };
+
+	//////////////////////////////////////
+    // BREAK TEXT INTO LINES /////////////
+    //////////////////////////////////////
+
+    self.breakText = function(ctx){
+        var words = self.text.split(' ');
+        var lines = [];
+        var currentLine = words[0];
+
+        for (var i = 1; i < words.length; i++) {
+            var word = words[i];
+            var width = ctx.measureText(currentLine + " " + word).width;
+            if (width < self.maxTextWidth) {
+                currentLine += " " + word;
+            } else {
+                lines.push(currentLine);
+                currentLine = word;
+            }
+        }
+        lines.push(currentLine); // Push the last line
+
+        return lines;
+    };
 
 	//////////////////////////////////////
 	// KILL LABEL /////////////////////////
@@ -84,10 +110,6 @@ function Label(model, config){
 	//////////////////////////////////////
 	// HELPER METHODS ////////////////////
 	//////////////////////////////////////
-
-	self.breakText = function(){
-		return self.text.split(/\n/);
-	};
 
 	self.getBounds = function(){
 

@@ -69,6 +69,28 @@ function Sidebar(loopy){
 			if(name=="" || name=="?") page.getComponent("label").select();
 
 		};
+		self.breakLabel = function(label) {
+			const maxCharsPerLine = 20;
+			const lines = [];
+			let currentLine = '';
+		  
+			for (let i = 0; i < label.length; i++) {
+			  const char = label[i];
+		  
+			  if (currentLine.length === maxCharsPerLine) {
+				lines.push(currentLine);
+				currentLine = '';
+			  }
+		  
+			  currentLine += char;
+			}
+		  
+			if (currentLine) {
+			  lines.push(currentLine);
+			}
+		  
+			return lines;
+		  };
 		page.addComponent(new ComponentButton({
 			label: "delete node",
 			//label: "delete circle",

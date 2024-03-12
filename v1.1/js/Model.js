@@ -126,6 +126,7 @@ function Model(loopy){
 
 		// Add label
 		var label = new Label(self,config);
+		console.log(label)
 		self.labels.push(label);
 		self.update();
 		return label;
