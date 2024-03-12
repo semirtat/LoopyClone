@@ -23,7 +23,7 @@ function PlayControls(loopy){
 			loopy.setMode(Loopy.MODE_PLAY);
 		}
 	});
-	*/
+	
 	// During the Editor
 	(function(){
 		var page = new Page();
@@ -44,7 +44,7 @@ function PlayControls(loopy){
 
 		self.addPage("Editor", page);
 	})();
-
+	*/
 	// During the Player
 	(function(){
 		var page = new Page();
