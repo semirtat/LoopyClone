@@ -123,7 +123,7 @@ function PlayControls(loopy){
 	})();
 	
 }
-
+/*
 function PlayButton(config){
 
 	var self = this;
@@ -142,6 +142,7 @@ function PlayButton(config){
 	}
 
 }
+*/
 function PlaySlider(config){
 
 	var self = this;
