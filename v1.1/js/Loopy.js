@@ -6,8 +6,6 @@ LOOPY!
 **********************************/
 
 Loopy.MODE_EDIT = 0;
-Loopy.MODE_PLAY = 1;
-
 Loopy.TOOL_INK = 0;
 Loopy.TOOL_DRAG = 1;
 Loopy.TOOL_ERASE = 2;
@@ -52,8 +50,8 @@ function Loopy(config){
 	self.label = new Labeller(self);
 
 	// Play Controls
-	self.playbar = new PlayControls(self);
-	self.playbar.showPage("Editor"); // start here
+	// self.playbar = new PlayControls(self);
+	// self.playbar.showPage("Editor"); // start here
 
 	// Modal
 	self.modal = new Modal(self);
@@ -95,38 +93,24 @@ function Loopy(config){
 	// PLAY & EDIT MODE //
 	//////////////////////
 
-	self.showPlayTutorial = false;
-	self.wobbleControls = -1;
-	self.setMode = function(mode){
+	// self.showPlayTutorial = false;
+	// self.wobbleControls = -1;
+	// self.setMode = function(mode){
 
-		self.mode = mode;
-		publish("loopy/mode");
+	// 	self.mode = mode;
+	// 	publish("loopy/mode");
+	// 	// Edit mode!
+	// 	if(mode==Loopy.MODE_EDIT){
+	// 		self.showPlayTutorial = false; // donezo
+	// 		self.wobbleControls = -1; // donezo
+	// 		self.sidebar.showPage("Edit");
+	// 		self.playbar.showPage("Editor");
+	// 		self.sidebar.dom.setAttribute("mode","edit");
+	// 		self.toolbar.dom.setAttribute("mode","edit");
+	// 		document.getElementById("canvasses").setAttribute("cursor", self.toolbar.currentTool); // TODO: EVENT BASED
+	// 	}
 
-		// Play mode!
-		if(mode==Loopy.MODE_PLAY){
-			self.showPlayTutorial = true; // show once!
-			if(!self.embedded) self.wobbleControls=45; // only if NOT embedded
-			self.sidebar.showPage("Edit");
-			self.playbar.showPage("Player");
-			self.sidebar.dom.setAttribute("mode","play");
-			self.toolbar.dom.setAttribute("mode","play");
-			document.getElementById("canvasses").removeAttribute("cursor"); // TODO: EVENT BASED
-		}else{
-			publish("model/reset");
-		}
-
-		// Edit mode!
-		if(mode==Loopy.MODE_EDIT){
-			self.showPlayTutorial = false; // donezo
-			self.wobbleControls = -1; // donezo
-			self.sidebar.showPage("Edit");
-			self.playbar.showPage("Editor");
-			self.sidebar.dom.setAttribute("mode","edit");
-			self.toolbar.dom.setAttribute("mode","edit");
-			document.getElementById("canvasses").setAttribute("cursor", self.toolbar.currentTool); // TODO: EVENT BASED
-		}
-
-	};
+	// };
 
 	/////////////////
 	// SAVE & LOAD //
