@@ -17,12 +17,13 @@ function PlayControls(loopy){
 
 	// PLAY BUTTON's keyboard shortcut
 	// TODO: Toggle back & forth??????
+	/*
 	subscribe("key/enter",function(){
 		if(Key.control){ // Ctrl-Enter or ⌘-Enter
 			loopy.setMode(Loopy.MODE_PLAY);
 		}
 	});
-
+	*/
 	// During the Editor
 	(function(){
 		var page = new Page();
