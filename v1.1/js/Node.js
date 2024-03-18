@@ -170,11 +170,11 @@ function Node(model, config) {
 		var y = self.y * 2;
 		var r = self.radius * 2;
 		var color = Node.COLORS[self.hue];
-
+		*/
 		// Translate!
 		ctx.save();
 		ctx.translate(x, y + _offset);
-		*/
+		
 		// DRAW HIGHLIGHT???
 		if (self.loopy.sidebar.currentPage.target == self) {
 			ctx.beginPath();
