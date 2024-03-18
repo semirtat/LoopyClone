@@ -165,6 +165,7 @@ function Node(model, config) {
 	
 	self.draw = function (ctx) {
 		// Retina
+		/*
 		var x = self.x * 2;
 		var y = self.y * 2;
 		var r = self.radius * 2;
@@ -173,7 +174,7 @@ function Node(model, config) {
 		// Translate!
 		ctx.save();
 		ctx.translate(x, y + _offset);
-
+		*/
 		// DRAW HIGHLIGHT???
 		if (self.loopy.sidebar.currentPage.target == self) {
 			ctx.beginPath();
