@@ -25,6 +25,7 @@ function Sidebar(loopy){
     ////////////////////////////////////////////////////////////////////////////////////////////
 
     // Node!
+    // comment out starting from "label" until self.add page lines to block people messing with nodes
     (function(){
         var page = new SidebarPage();
         page.addComponent(new ComponentButton({
@@ -34,7 +35,6 @@ function Sidebar(loopy){
                 self.showPage("Edit");
             }
         }));
-        /*
         page.addComponent("label", new ComponentInput({
             label: "<br><br>Name:",
             textarea: true,
@@ -77,7 +77,6 @@ function Sidebar(loopy){
                 self.showPage("Edit");
             }
         }));
-        */
         self.addPage("Node", page);
     })();
     // Edge!
