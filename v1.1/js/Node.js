@@ -198,6 +198,7 @@ function Node(model, config) {
 		// _circleRadius = _circleRadius*0.75 + _circleRadiusGoto*0.25;
 
 		// RADIUS IS (ATAN) of VALUE?!?!?!
+		/*
 		var _r = Math.atan(self.value * 5);
 		_r = _r / (Math.PI / 2);
 		_r = (_r + 1) / 2;
@@ -218,16 +219,14 @@ function Node(model, config) {
 				_value = 1 - (1 / self.value) * 0.1;
 			}
 		}
-
+		*/
 		// Colored bubble
-		/*
 		ctx.beginPath();
 		var _circleRadiusGoto = r * _value; // Radius
 		_circleRadius = _circleRadius * 0.8 + _circleRadiusGoto * 0.2;
 		ctx.arc(0, 0, _circleRadius, 0, Math.TAU, false);
 		ctx.fillStyle = color;
 		ctx.fill();
-		*/
 
 		// Text!
 		ctx.font = "25px Arial"; // Adjust the font size as needed
