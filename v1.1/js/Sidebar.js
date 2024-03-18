@@ -79,7 +79,6 @@ function Sidebar(loopy){
         self.addPage("Node", page);
     })();
     // Edge!
-    /*
     (function(){
         var page = new SidebarPage();
         page.addComponent(new ComponentButton({
@@ -89,6 +88,7 @@ function Sidebar(loopy){
                 self.showPage("Edit");
             }
         }));
+        /*
         page.addComponent("strength", new ComponentSlider({
             bg: "strength",
             label: "<br><br>Relationship:",
@@ -111,9 +111,10 @@ function Sidebar(loopy){
                 self.showPage("Edit");
             }
         }));
+        */
         self.addPage("Edge", page);
     })();
-    */
+    
 
     // Label!
     (function(){
