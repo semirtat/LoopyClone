@@ -162,6 +162,7 @@ function Node(model, config) {
 
 	// Draw
 	var _circleRadius = 0;
+	/*
 	self.draw = function (ctx) {
 		// Retina
 		var x = self.x * 2;
@@ -265,6 +266,7 @@ function Node(model, config) {
 		// Restore
 		ctx.restore();
 	};
+	*/
 
 	//////////////////////////////////////
 	// KILL NODE /////////////////////////
