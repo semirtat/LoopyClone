@@ -172,8 +172,10 @@ function Node(model, config) {
 		var color = Node.COLORS[self.hue];
 
 		// Translate!
+		/*
 		ctx.save();
 		ctx.translate(x, y + _offset);
+		*/
 		
 		// DRAW HIGHLIGHT???
 		if (self.loopy.sidebar.currentPage.target == self) {
