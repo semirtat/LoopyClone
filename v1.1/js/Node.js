@@ -198,7 +198,6 @@ function Node(model, config) {
 		// _circleRadius = _circleRadius*0.75 + _circleRadiusGoto*0.25;
 
 		// RADIUS IS (ATAN) of VALUE?!?!?!
-		/*
 		var _r = Math.atan(self.value * 5);
 		_r = _r / (Math.PI / 2);
 		_r = (_r + 1) / 2;
@@ -219,7 +218,6 @@ function Node(model, config) {
 				_value = 1 - (1 / self.value) * 0.1;
 			}
 		}
-		*/
 		// Colored bubble
 		ctx.beginPath();
 		var _circleRadiusGoto = r * _value; // Radius
