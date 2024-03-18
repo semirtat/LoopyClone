@@ -190,6 +190,7 @@ function Ink(loopy){
 				r = Ink.MINIMUM_RADIUS;
 
 				// Make that node!
+				/*
 				var newNode = loopy.model.addNode({
 					x:x,
 					y:y,
@@ -198,7 +199,7 @@ function Ink(loopy){
 
 				// Edit it immediately
 				loopy.sidebar.edit(newNode);
-
+*/
 			}
 
 		}
