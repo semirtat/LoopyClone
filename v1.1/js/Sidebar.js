@@ -79,6 +79,7 @@ function Sidebar(loopy){
         self.addPage("Node", page);
     })();
     // Edge!
+    /*
     (function(){
         var page = new SidebarPage();
         page.addComponent(new ComponentButton({
@@ -112,6 +113,7 @@ function Sidebar(loopy){
         }));
         self.addPage("Edge", page);
     })();
+    */
 
     // Label!
     (function(){
