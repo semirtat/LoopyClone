@@ -162,7 +162,7 @@ function Node(model, config) {
 
 	// Draw
 	var _circleRadius = 0;
-	/*
+	
 	self.draw = function (ctx) {
 		// Retina
 		var x = self.x * 2;
@@ -183,6 +183,7 @@ function Node(model, config) {
 		}
 
 		// White-gray bubble with colored border
+		/*
 		ctx.beginPath();
 		ctx.arc(0, 0, r - 2, 0, Math.TAU, false);
 		ctx.fillStyle = "#fff";
@@ -190,7 +191,7 @@ function Node(model, config) {
 		ctx.lineWidth = 6;
 		ctx.strokeStyle = color;
 		ctx.stroke();
-
+		*/
 		// Circle radius
 		// var _circleRadiusGoto = r*(self.value+1);
 		// _circleRadius = _circleRadius*0.75 + _circleRadiusGoto*0.25;
@@ -266,7 +267,7 @@ function Node(model, config) {
 		// Restore
 		ctx.restore();
 	};
-	*/
+	
 
 	//////////////////////////////////////
 	// KILL NODE /////////////////////////
