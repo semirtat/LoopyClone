@@ -165,12 +165,12 @@ function Node(model, config) {
 	
 	self.draw = function (ctx) {
 		// Retina
-		/*
+
 		var x = self.x * 2;
 		var y = self.y * 2;
 		var r = self.radius * 2;
 		var color = Node.COLORS[self.hue];
-		*/
+
 		// Translate!
 		ctx.save();
 		ctx.translate(x, y + _offset);
