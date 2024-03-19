@@ -35,6 +35,7 @@ function Sidebar(loopy){
                 self.showPage("Edit");
             }
         }));
+        /*
         page.addComponent("label", new ComponentInput({
             label: "<br><br>Name:",
             textarea: true,
@@ -77,6 +78,7 @@ function Sidebar(loopy){
                 self.showPage("Edit");
             }
         }));
+        */
         self.addPage("Node", page);
     })();
     // Edge!
@@ -167,7 +169,7 @@ function Sidebar(loopy){
         page.addComponent(new ComponentHTML({
             html: ""+
             
-            "<b style='font-size:1.4em'>LOOPY</b> (v1.1)<br>Semir Causal model page<br><br>"+
+            "<b style='font-size:1.4em'>LOOPY</b>"+
 
 
             "<hr/><br>"+
