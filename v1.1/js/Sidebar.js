@@ -174,7 +174,7 @@ function Sidebar(loopy){
 
             "<hr/><br>"+
 
-            "<span class='mini_button' onclick='publish(\"modal\",[\"save_link\"])'>save as link</span> <br><br>"
+            "<span class='mini_button' onclick='publish(\"modal\",[\"save_link\"])'>save causal model </span> <br><br>"
 
 
 
