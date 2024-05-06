@@ -124,7 +124,7 @@ function Modal(loopy){
 		chars.style.fontSize = "15px";
 		chars.style.marginTop = "3px";
 		chars.style.color = "#888";
-		chars.innerHTML = "X out of 2048 characters";
+		chars.innerHTML = "";
 		page.dom.appendChild(chars);
 
 		page.onshow = function(){
