@@ -169,12 +169,12 @@ function Sidebar(loopy){
         page.addComponent(new ComponentHTML({
             html: ""+
             
-            "<b style='font-size:1.4em'>Causal Graph</b>"+
+            "<b style='font-size:1.4em'>Causal Graph Interface</b>"+
 
 
             "<hr/><br>"+
 
-            "<span class='mini_button' onclick='publish(\"modal\",[\"save_link\"])'>save causal model </span> <br><br>"
+            "<span class='mini_button' onclick='publish(\"modal\",[\"save_link\"])'>save graph </span> <br><br>"
 
 
 
