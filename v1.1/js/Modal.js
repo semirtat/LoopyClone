@@ -106,7 +106,7 @@ function Modal(loopy){
 		page.width = 500;
 		page.height = 155;
 		page.addComponent(new ComponentHTML({
-			html: "copy your link:"
+			html: "copy the entire link:"
 		}));
 		var output = page.addComponent(new ComponentOutput({}));
 
@@ -115,7 +115,7 @@ function Modal(loopy){
 		label.style.fontSize = "15px";
 		label.style.marginTop = "6px";
 		label.style.color = "#888";
-		label.innerHTML = "(this is a long URL, so you may want to use a link-shortener like <a target='_blank' href='https://bitly.com/'>bit.ly</a>)";
+		label.innerHTML = "";
 		page.dom.appendChild(label);
 
 		// chars left...
