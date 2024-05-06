@@ -135,6 +135,7 @@ function Modal(loopy){
 			output.dom.select();
 
 			// Chars left
+			/*
 			var html = link.length+" / 2048 characters";
 			if(link.length>2048){
 				html += " - MAY BE TOO LONG FOR MOST BROWSERS";
@@ -142,6 +143,7 @@ function Modal(loopy){
 			chars.innerHTML = html;
 			chars.style.fontWeight = (link.length>2048) ? "bold" : "100";
 			chars.style.fontSize = (link.length>2048) ? "14px" : "15px";
+			*/
 
 		};
 
