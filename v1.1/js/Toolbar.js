@@ -64,6 +64,7 @@ function Toolbar(loopy){
 			self.setTool("ink");
 		}
 	});
+	/*
 	self.addButton({
 		id: "label",
 		tooltip: "(T)EXT",
@@ -71,6 +72,7 @@ function Toolbar(loopy){
 			self.setTool("label");
 		}
 	});
+	*/
 	self.addButton({
 		id: "drag",
 		tooltip: "MO(V)E",
