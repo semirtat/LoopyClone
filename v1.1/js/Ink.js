@@ -188,9 +188,8 @@ function Ink(loopy){
 
 				// LOCK TO JUST SMALLEST CIRCLE.
 				r = Ink.MINIMUM_RADIUS;
-				// Comment out from newNode until after sidebar.edit)(newnode) to prevent new node creation (line 193 to 202)
+				// Comment out from newNode until after sidebar.edit)(newnode) to prevent new node creation (line 193 to 200)
 				// Make that node!
-				
 				var newNode = loopy.model.addNode({
 					x:x,
 					y:y,
@@ -199,7 +198,6 @@ function Ink(loopy){
 
 				// Edit it immediately
 				loopy.sidebar.edit(newNode);
-				
 			}
 
 		}

@@ -25,7 +25,7 @@ function Sidebar(loopy){
     ////////////////////////////////////////////////////////////////////////////////////////////
 
     // Node!
-    // comment out starting from "label" until self.add page lines to block people messing with nodes (39 to 81)
+    // comment out starting from "label" until self.add page lines to block people messing with nodes (38 to 80)
     (function(){
         var page = new SidebarPage();
         page.addComponent(new ComponentButton({
