@@ -35,7 +35,6 @@ function Sidebar(loopy){
                 self.showPage("Edit");
             }
         }));
-        
         page.addComponent("label", new ComponentInput({
             label: "<br><br>Name:",
             textarea: true,
@@ -78,7 +77,6 @@ function Sidebar(loopy){
                 self.showPage("Edit");
             }
         }));
-        
         self.addPage("Node", page);
     })();
     // Edge!
