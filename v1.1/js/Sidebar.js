@@ -169,7 +169,7 @@ function Sidebar(loopy){
         page.addComponent(new ComponentHTML({
             html: ""+
             
-            "<b style='font-size:1.4em'>Causal Graph Interface</b>"+
+            "<b style='font-size:1.4em'>Causal Graph Interface IS THIS WORKING</b>"+
 
 
             "<hr/><br>"+
